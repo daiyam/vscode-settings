@@ -1,0 +1,48 @@
+// Place your settings in this file to overwrite the default settings
+{
+	// Editor
+	"editor.fontSize": 14,
+	"editor.fontFamily": "Fira Code",
+	"editor.fontWeight": "100",
+	"editor.insertSpaces": false,
+	"editor.minimap.enabled": false,
+	"editor.renderWhitespace": "none",
+	"editor.occurrencesHighlight": false,
+	"editor.selectionHighlight": false,
+	"editor.trimAutoWhitespace": false,
+	"editor.wordWrap": "on",
+	
+	// Workbench
+	"workbench.colorTheme": "Zokugun",
+	"workbench.iconTheme": "vscode-icons",
+	"workbench.statusBar.feedback.visible": false,
+	
+	// File Explorer
+	"explorer.openEditors.visible": 0,
+	"problems.decorations.enabled": false,
+	
+	// Window
+	"window.restoreFullscreen": true,
+	"window.newWindowDimensions": "maximized",
+	
+	// Telemetry
+	"telemetry.enableTelemetry": false,
+	
+	// Extensions
+	"extensions.ignoreRecommendations": false,
+	
+	// Extension: Line endings
+	"lineEndings.lfCharacter": ".",
+	"lineEndings.color": "#009999",
+	
+	// Extension: vscode-icons
+	"vsicons.projectDetection.disableDetect": true,
+	
+	// Language: JavaScript
+	"javascript.showUnused": false,
+	
+	// Language: PHP
+	"[php]": {
+		"editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?"
+	}
+}
