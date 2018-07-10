@@ -1,6 +1,20 @@
 // Place your settings in this file to overwrite the default settings
 {
 	// Editor
+	"editor.autoIndent": false,
+	"editor.foldingStrategy": "explicit",
+	"editor.foldingExplicitMarkers": {
+        "comment": {
+        	"enabled": true,
+        	"start": "\\/\\*\\*",
+        	"end": "\\*\\/"
+        },
+        "region": {
+        	"enabled": true,
+        	"start": "\\{\\{\\{",
+        	"end": "\\}\\}\\}"
+        }
+    },
 	"editor.fontSize": 14,
 	"editor.fontFamily": "Fira Code",
 	"editor.fontWeight": "100",
@@ -8,7 +22,13 @@
 	"editor.minimap.enabled": false,
 	"editor.renderWhitespace": "none",
 	"editor.occurrencesHighlight": false,
+	"editor.quickSuggestions": {
+		"other": false,
+		"comments": false,
+		"strings": false
+	},
 	"editor.selectionHighlight": false,
+	"editor.showFoldingControls": "always",
 	"editor.trimAutoWhitespace": false,
 	"editor.wordWrap": "on",
 	
@@ -18,12 +38,15 @@
 	"workbench.statusBar.feedback.visible": false,
 	
 	// File Explorer
+	"explorer.autoReveal": false,
 	"explorer.openEditors.visible": 0,
 	"problems.decorations.enabled": false,
 	
 	// Window
-	"window.restoreFullscreen": true,
 	"window.newWindowDimensions": "maximized",
+	"window.restoreFullscreen": true,
+	"window.restoreWindows": "all",
+	"window.title": "${activeEditorLong}",
 	
 	// Telemetry
 	"telemetry.enableTelemetry": false,
@@ -36,10 +59,25 @@
 	"lineEndings.color": "#009999",
 	
 	// Extension: vscode-icons
+	"vsicons.dontShowNewVersionMessage": true,
 	"vsicons.projectDetection.disableDetect": true,
+	
+	// Language: HTML
+	"html.autoClosingTags": false,
 	
 	// Language: JavaScript
 	"javascript.showUnused": false,
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	
+	// Language: JSON
+	"[json]": {
+        "editor.foldingStrategy": "indentation"
+    },
+	
+	// Language: JSON with Comments
+    "[jsonc]": {
+        "editor.foldingStrategy": "indentation"
+    },
 	
 	// Language: PHP
 	"[php]": {
