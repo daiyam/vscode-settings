@@ -31,54 +31,56 @@
 	"editor.showFoldingControls": "always",
 	"editor.trimAutoWhitespace": false,
 	"editor.wordWrap": "on",
-	
+
 	// Workbench
 	"workbench.colorTheme": "Zokugun",
 	"workbench.iconTheme": "vscode-icons",
+	"workbench.editor.openPositioning": "sort",
 	"workbench.statusBar.feedback.visible": false,
-	
+
 	// File Explorer
 	"explorer.autoReveal": false,
 	"explorer.openEditors.visible": 0,
 	"problems.decorations.enabled": false,
-	
+
 	// Window
 	"window.newWindowDimensions": "maximized",
 	"window.restoreFullscreen": true,
 	"window.restoreWindows": "all",
 	"window.title": "${activeEditorLong}",
-	
+
 	// Telemetry
 	"telemetry.enableTelemetry": false,
-	
+
 	// Extensions
 	"extensions.ignoreRecommendations": false,
+	"colorize.ignore_search_variables_info": true,
 	
 	// Extension: Line endings
 	"lineEndings.lfCharacter": ".",
 	"lineEndings.color": "#009999",
-	
+
 	// Extension: vscode-icons
 	"vsicons.dontShowNewVersionMessage": true,
 	"vsicons.projectDetection.disableDetect": true,
-	
+
 	// Language: HTML
 	"html.autoClosingTags": false,
-	
+
 	// Language: JavaScript
 	"javascript.showUnused": false,
 	"javascript.updateImportsOnFileMove.enabled": "always",
-	
+
 	// Language: JSON
 	"[json]": {
         "editor.foldingStrategy": "indentation"
     },
-	
+
 	// Language: JSON with Comments
     "[jsonc]": {
-        "editor.foldingStrategy": "indentation"
+        //"editor.foldingStrategy": "indentation"
     },
-	
+
 	// Language: PHP
 	"[php]": {
 		"editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?"

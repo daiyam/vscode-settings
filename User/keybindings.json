@@ -61,5 +61,14 @@
         "key": "cmd+k cmd+j",
         "command": "-editor.unfoldAll",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+w",
+        "command": "-workbench.action.closeWindow",
+        "when": "!editorIsOpen && !multipleEditorGroups"
+    },
+    {
+        "key": "ctrl+cmd+left",
+        "command": "workbench.files.action.showActiveFileInExplorer"
     }
 ]
