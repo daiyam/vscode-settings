@@ -2,6 +2,7 @@
 {
 	// Editor
 	"editor.autoIndent": false,
+	"editor.copyWithSyntaxHighlighting": false,
 	"editor.foldingStrategy": "explicit",
 	"editor.foldingExplicitMarkers": {
         "comment": {
@@ -17,7 +18,7 @@
     },
 	"editor.fontSize": 14,
 	"editor.fontFamily": "Fira Code",
-	"editor.fontWeight": "100",
+	"editor.fontWeight": "300",
 	"editor.insertSpaces": false,
 	"editor.minimap.enabled": false,
 	"editor.renderWhitespace": "none",
@@ -27,39 +28,84 @@
 		"comments": false,
 		"strings": false
 	},
+	"editor.renderControlCharacters": false,
 	"editor.selectionHighlight": false,
 	"editor.showFoldingControls": "always",
 	"editor.trimAutoWhitespace": false,
 	"editor.wordWrap": "on",
 
-	// Workbench
-	"workbench.colorTheme": "Zokugun",
-	"workbench.iconTheme": "vscode-icons",
-	"workbench.editor.openPositioning": "sort",
-	"workbench.statusBar.feedback.visible": false,
-
 	// File Explorer
 	"explorer.autoReveal": false,
 	"explorer.openEditors.visible": 0,
 	"problems.decorations.enabled": false,
+	
+	// Search
+	"search.showLineNumbers": true,
+	
+	// Telemetry
+	"telemetry.enableTelemetry": false,
+	
+	// Terminal
+	"terminal.integrated.cursorBlinking": true,
+	"terminal.integrated.drawBoldTextInBrightColors": false,
+	"terminal.integrated.fontFamily": "Monaco",
 
 	// Window
 	"window.newWindowDimensions": "maximized",
 	"window.restoreFullscreen": true,
 	"window.restoreWindows": "all",
 	"window.title": "${activeEditorLong}",
-
-	// Telemetry
-	"telemetry.enableTelemetry": false,
+	
+	// Workbench
+	"workbench.colorTheme": "Zokugun",
+	"workbench.iconTheme": "vscode-icons",
+	"workbench.editor.openPositioning": "sort",
+	"workbench.statusBar.feedback.visible": false,
+	
+	// Files Associations
+	"files.associations": {
+		".color.ks.ecma-v6.ksb": "javascript",
+		".index.ks.ecma-v6.ksm": "json",
+		".number.ks.ecma-v6.ksb": "javascript",
+		".index.ks.trident-v5.ksm": "json"
+	},
 
 	// Extensions
 	"extensions.ignoreRecommendations": false,
+	
+	// Extension: Colorize
 	"colorize.ignore_search_variables_info": true,
+	
+	// Extension: Explicit Folding
+	"explicitFolding.markers": {
+		"comment": {
+			"start": "\\/\\*\\*",
+			"end": "\\*\\/"
+		},
+		"region": {
+			"start": "\\{\\{\\{",
+			"end": "\\}\\}\\}"
+		}
+	},
+	
+	// Extension: GitLens
+	"gitlens.advanced.telemetry.enabled": false,
+	"gitlens.advanced.messages": {
+		"suppressLineUncommittedWarning": true
+	},
+	"gitlens.codeLens.enabled": false,
+	"gitlens.currentLine.enabled": false,
+	"gitlens.menus": {
+		"editorGroup": {
+			"blame": false,
+			"compare": false
+		}
+	},
 	
 	// Extension: Line endings
 	"lineEndings.lfCharacter": ".",
 	"lineEndings.color": "#009999",
-
+	
 	// Extension: vscode-icons
 	"vsicons.dontShowNewVersionMessage": true,
 	"vsicons.projectDetection.disableDetect": true,
@@ -80,9 +126,20 @@
     "[jsonc]": {
         //"editor.foldingStrategy": "indentation"
     },
+	
+	// Language: kaoscript
+	"[kaoscript]": {
+		"editor.wordSeparators": "`~!#%^&*()-=+[{]}\\|;:'\",.<>/?"
+	},
 
 	// Language: PHP
 	"[php]": {
 		"editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?"
-	}
+	},
+	
+	// Language: XML
+    "[xml]": {
+        "editor.foldingStrategy": "indentation"
+	},
+	"explorer.confirmDelete": false,
 }

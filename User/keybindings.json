@@ -70,5 +70,67 @@
     {
         "key": "ctrl+cmd+left",
         "command": "workbench.files.action.showActiveFileInExplorer"
+    },
+    {
+        "key": "cmd+e cmd+m",
+        "command": "bookmarks.toggle",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+k",
+        "command": "-bookmarks.toggle",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+e cmd+.",
+        "command": "bookmarks.jumpToNext",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+l",
+        "command": "-bookmarks.jumpToNext",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+e cmd+,",
+        "command": "bookmarks.jumpToPrevious",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+j",
+        "command": "-bookmarks.jumpToPrevious",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+,",
+        "command": "workbench.action.openSettingsJson"
+    },
+    {
+        "key": "cmd+,",
+        "command": "-workbench.action.openSettings"
+    },
+    {
+        "key": "shift+alt+t",
+        "command": "editor.action.inspectTMScopes"
+    },
+    {
+        "key": "cmd+e cmd+k",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "name": "folding-begin"
+        }
+    },
+    {
+        "key": "backspace",
+        "command": "-markdown.extension.onBackspaceKey",
+        "when": "editorTextFocus && !editorReadonly && !suggestWidgetVisible && editorLangId == 'markdown' && vim.mode != 'CommandlineInProgress' && vim.mode != 'EasyMotionInputMode' && vim.mode != 'EasyMotionMode' && vim.mode != 'Normal' && vim.mode != 'Replace' && vim.mode != 'SearchInProgressMode' && vim.mode != 'SurroundInputMode' && vim.mode != 'Visual' && vim.mode != 'VisualBlock' && vim.mode != 'VisualLine'"
+    },
+    {
+        "key": "cmd+f8",
+        "command": "extension.rerunLastCommand"
+    },
+    {
+        "key": "cmd+f7",
+        "command": "-extension.rerunLastCommand"
     }
 ]
