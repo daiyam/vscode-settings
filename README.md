@@ -25,7 +25,7 @@ Restore
 
 ```
 # Restore settings files
-cp User/* ~/Library/Application\ Support/Code/User/
+cp -r User/* ~/Library/Application\ Support/Code/User/
 
 # Import extensions
 for LINE in $(cat "vscode-extensions.txt")

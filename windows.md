@@ -22,7 +22,7 @@ code --list-extensions | sort -f -o vscode-extensions.txt
 
 ```
 # Restore settings files
-cp User\* %APPDATA%\Code\User\
+cp -r User\* %APPDATA%\Code\User\
 
 # Import extensions
 for LINE in $(cat "vscode-extensions.txt")
@@ -54,7 +54,7 @@ codium --list-extensions | sort -f -o vscode-extensions.txt
 
 ```
 # Restore settings files
-cp User\* %APPDATA%\VSCodium\User\
+cp -r User\* %APPDATA%\VSCodium\User\
 
 # Import extensions
 for LINE in $(cat "vscode-extensions.txt")
@@ -86,7 +86,7 @@ mrcode --list-extensions | sort -f -o vscode-extensions.txt
 
 ```
 # Restore settings files
-cp User\* %APPDATA%\MrCode\User\
+cp -r User\* %APPDATA%\MrCode\User\
 
 # Import extensions
 for LINE in $(cat "vscode-extensions.txt")
