@@ -5,23 +5,23 @@ Provides my preferred settings for vscode
 
 [Follow the documentation to install the command `code`](https://code.visualstudio.com/docs/setup/setup-overview)
 
-VSCode
+Backup
 ------
 
-### Backup
-
 ```
-mkdir User
+mkdir -p User/snippets
 
 # Backup settings files
 cp ~/Library/Application\ Support/Code/User/keybindings.json User/
 cp ~/Library/Application\ Support/Code/User/settings.json User/
+cp ~/Library/Application\ Support/Code/User/snippets/* User/snippets/
 
 # Export extension list
 code --list-extensions | sort -f -o vscode-extensions.txt
 ```
 
-### Restore
+Restore
+-------
 
 ```
 # Restore settings files
@@ -36,37 +36,33 @@ do
 done
 ```
 
-```
-# Restore settings files
-cp User/* ~/.config/Code/User/
+Binary Names
+------------
 
-# Import extensions
-for LINE in $(cat "vscode-extensions.txt")
-do
-  printf "%b%s%b\n" "\e[44m" "$LINE" "\e[49m"
-  code --install-extension "$LINE"
-  echo -e "\n"
-done
-```
+- __VSCode__: `code`
+- __VSCodium__: `codium`
+- __MrCode__: `mrcode`
 
-Code OSS
---------
+Settings Paths
+--------------
 
-### Backup
+### VSCode
 
-```
-mkdir User
+- __Windows__: `%APPDATA%\Code\User`
+- __macOS__: `~/Library/Application Support/Code/User`
+- __Linux__: `~/.config/Code/User`
 
-# Backup settings files
-cp ~/Library/Application\ Support/Code\ OSS/User/keybindings.json User/
-cp ~/Library/Application\ Support/Code\ OSS/User/settings.json User/
-```
+### VSCodium
 
-### Restore
+- __Windows__: `%APPDATA%\VSCodium\User`
+- __macOS__: `~/Library/Application Support/VSCodium/User`
+- __Linux__: `~/.config/VSCodium/User`
 
-```
-# Restore settings files
-cp User/* ~/Library/Application\ Support/Code\ OSS/User/
-```
+### MrCode
+
+- __Windows__: `%APPDATA%\MrCode\User`
+- __macOS__: `~/Library/Application Support/MrCode/User`
+- __Linux__: `~/.config/MrCode/User`
+
 
 **Enjoy!**

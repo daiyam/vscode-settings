@@ -1,21 +1,10 @@
 // Place your settings in this file to overwrite the default settings
 {
 	// Editor
-	"editor.autoIndent": false,
+	"editor.autoIndent": "keep",
 	"editor.copyWithSyntaxHighlighting": false,
+	"editor.folding": true,
 	"editor.foldingStrategy": "explicit",
-	"editor.foldingExplicitMarkers": {
-        "comment": {
-        	"enabled": true,
-        	"start": "\\/\\*\\*",
-        	"end": "\\*\\/"
-        },
-        "region": {
-        	"enabled": true,
-        	"start": "\\{\\{\\{",
-        	"end": "\\}\\}\\}"
-        }
-    },
 	"editor.fontSize": 14,
 	"editor.fontFamily": "Fira Code",
 	"editor.fontWeight": "300",
@@ -28,14 +17,17 @@
 		"comments": false,
 		"strings": false
 	},
-	"editor.renderControlCharacters": false,
+	"editor.renderControlCharacters": true,
 	"editor.selectionHighlight": false,
 	"editor.showFoldingControls": "always",
+	// "editor.showUnused": false,
 	"editor.trimAutoWhitespace": false,
 	"editor.wordWrap": "on",
+	"breadcrumbs.enabled": false,
 
 	// File Explorer
 	"explorer.autoReveal": false,
+	"explorer.confirmDelete": false,
 	"explorer.openEditors.visible": 0,
 	"problems.decorations.enabled": false,
 	
@@ -55,6 +47,7 @@
 	"window.restoreFullscreen": true,
 	"window.restoreWindows": "all",
 	"window.title": "${activeEditorLong}",
+	"window.zoomLevel": 0,
 	
 	// Workbench
 	"workbench.colorTheme": "Zokugun",
@@ -64,47 +57,71 @@
 	
 	// Files Associations
 	"files.associations": {
-		".color.ks.ecma-v6.ksb": "javascript",
-		".index.ks.ecma-v6.ksm": "json",
-		".number.ks.ecma-v6.ksb": "javascript",
-		".index.ks.trident-v5.ksm": "json"
+		"*.ksb": "javascript",
+		"*.ksm": "json",
 	},
 
 	// Extensions
-	"extensions.ignoreRecommendations": false,
+	"extensions.ignoreRecommendations": true,
+	
+	// Extension: Bracket Pair Colorizer 2
+	// "bracket-pair-colorizer-2.colors": ["#00ffff"],
+	// "bracket-pair-colorizer-2.showBracketsInGutter": true,
+	// "bracket-pair-colorizer-2.scopeLineCSS": [
+	// 	"borderStyle : solid",
+	// 	"borderWidth : 1px",
+	// 	"borderColor : {color}; opacity: 0.3"
+	// ],
+	//  "bracket-pair-colorizer-2.showHorizontalScopeLine": false,
 	
 	// Extension: Colorize
-	"colorize.ignore_search_variables_info": true,
+	// "colorize.ignore_search_variables_info": true,
 	
 	// Extension: Explicit Folding
-	"explicitFolding.markers": {
-		"comment": {
-			"start": "\\/\\*\\*",
-			"end": "\\*\\/"
-		},
-		"region": {
-			"start": "\\{\\{\\{",
-			"end": "\\}\\}\\}"
-		}
+	"folding": {
+		"*": [
+			{
+				"begin": "{{{",
+				"end": "}}}",
+				// "foldLastLine": false
+				// "kind": "comment"
+			},
+			/* {
+				"beginRegex": "#begin ([\\w]+)",
+				"endRegex": "#end \\1"
+			},
+			{
+				"beginRegex": "#start ([\\w]+)",
+				"endRegex": "#stop \\1"
+			},
+			{
+				"begin": "#if",
+				"middle": "#else",
+				"end": "#endif"
+			}, */
+		]
 	},
 	
 	// Extension: GitLens
-	"gitlens.advanced.telemetry.enabled": false,
-	"gitlens.advanced.messages": {
-		"suppressLineUncommittedWarning": true
-	},
-	"gitlens.codeLens.enabled": false,
-	"gitlens.currentLine.enabled": false,
-	"gitlens.menus": {
-		"editorGroup": {
-			"blame": false,
-			"compare": false
-		}
-	},
+	// "gitlens.advanced.telemetry.enabled": false,
+	// "gitlens.advanced.messages": {
+	// 	"suppressLineUncommittedWarning": true
+	// },
+	// "gitlens.codeLens.enabled": false,
+	// "gitlens.currentLine.enabled": false,
+	// "gitlens.menus": {
+	// 	"editorGroup": {
+	// 		"blame": false,
+	// 		"compare": false
+	// 	}
+	// },
 	
 	// Extension: Line endings
 	"lineEndings.lfCharacter": ".",
 	"lineEndings.color": "#009999",
+	
+	// Extension: 
+	// "taskExplorer.enableSideBar": true,
 	
 	// Extension: vscode-icons
 	"vsicons.dontShowNewVersionMessage": true,
@@ -114,7 +131,6 @@
 	"html.autoClosingTags": false,
 
 	// Language: JavaScript
-	"javascript.showUnused": false,
 	"javascript.updateImportsOnFileMove.enabled": "always",
 
 	// Language: JSON
@@ -141,5 +157,4 @@
     "[xml]": {
         "editor.foldingStrategy": "indentation"
 	},
-	"explorer.confirmDelete": false,
 }
