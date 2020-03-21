@@ -6,7 +6,7 @@ VSCode
 
 ### Backup
 
-```
+```sh
 mkdir -p User/snippets
 
 # Backup settings files
@@ -20,7 +20,7 @@ code --list-extensions | sort -f -o vscode-extensions.txt
 
 ### Restore
 
-```
+```sh
 # Restore settings files
 cp -r User/* ~/.config/Code/User/
 
@@ -38,7 +38,7 @@ VSCodium
 
 ### Backup
 
-```
+```sh
 mkdir -p User/snippets
 
 # Backup settings files
@@ -52,7 +52,7 @@ codium --list-extensions | sort -f -o vscode-extensions.txt
 
 ### Restore
 
-```
+```sh
 # Restore settings files
 cp -r User/* ~/.config/VSCodium/User/
 
@@ -70,7 +70,7 @@ MrCode
 
 ### Backup
 
-```
+```sh
 mkdir -p User/snippets
 
 # Backup settings files
@@ -84,7 +84,7 @@ mrcode --list-extensions | sort -f -o vscode-extensions.txt
 
 ### Restore
 
-```
+```sh
 # Restore settings files
 cp -r User/* ~/.config/MrCode/User/
 

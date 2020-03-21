@@ -1,36 +1,36 @@
-Linux
-=====
+Windows
+=======
 
 VSCode
 ------
 
 ### Backup
 
-```
-mkdir -p User\snippets
+```ps
+mkdir -ErrorAction SilentlyContinue User\snippets
 
 # Backup settings files
-cp %APPDATA%\Code\User\keybindings.json User\
-cp %APPDATA%\Code\User\settings.json User\
-cp %APPDATA%\Code\User\snippets\* User\snippets\
+Copy-Item -Path $env:appdata\Code\User\keybindings.json -Destination User
+Copy-Item -Path $env:appdata\Code\User\settings.json -Destination User
+Copy-Item -Path $env:appdata\Code\User\snippets\* -Destination User\snippets
 
 # Export extension list
-code --list-extensions | sort -f -o vscode-extensions.txt
+code --list-extensions | Out-File -FilePath vscode-extensions.txt
 ```
 
 ### Restore
 
-```
+```ps
 # Restore settings files
-cp -r User\* %APPDATA%\Code\User\
+Get-ChildItem -File User | Copy-Item -Path { $_.FullName } -Destination $env:appdata\Code\User
+Get-ChildItem -File User\snippets | Copy-Item -Path { $_.FullName } -Destination $env:appdata\Code\User\snippets
 
 # Import extensions
-for LINE in $(cat "vscode-extensions.txt")
-do
-  printf "%b%s%b\n" "\e[44m" "$LINE" "\e[49m"
-  code --install-extension "$LINE"
-  echo -e "\n"
-done
+ForEach ($name in Get-Content vscode-extensions.txt) {
+  Write-Host $name -ForegroundColor Blue
+  code --install-extension $name
+  Write-Host `n
+}
 ```
 
 VSCodium
@@ -38,31 +38,31 @@ VSCodium
 
 ### Backup
 
-```
-mkdir -p User\snippets
+```ps
+mkdir -ErrorAction SilentlyContinue User\snippets
 
 # Backup settings files
-cp %APPDATA%\VSCodium\User\keybindings.json User\
-cp %APPDATA%\VSCodium\User\settings.json User\
-cp %APPDATA%\VSCodium\User\snippets\* User\snippets\
+Copy-Item -Path $env:appdata\VSCodium\User\keybindings.json -Destination User
+Copy-Item -Path $env:appdata\VSCodium\User\settings.json -Destination User
+Copy-Item -Path $env:appdata\VSCodium\User\snippets\* -Destination User\snippets
 
 # Export extension list
-codium --list-extensions | sort -f -o vscode-extensions.txt
+codium --list-extensions | Out-File -FilePath vscode-extensions.txt
 ```
 
 ### Restore
 
-```
+```ps
 # Restore settings files
-cp -r User\* %APPDATA%\VSCodium\User\
+Get-ChildItem -File User | Copy-Item -Path { $_.FullName } -Destination $env:appdata\VSCodium\User
+Get-ChildItem -File User\snippets | Copy-Item -Path { $_.FullName } -Destination $env:appdata\VSCodium\User\snippets
 
 # Import extensions
-for LINE in $(cat "vscode-extensions.txt")
-do
-  printf "%b%s%b\n" "\e[44m" "$LINE" "\e[49m"
-  codium --install-extension "$LINE"
-  echo -e "\n"
-done
+ForEach ($name in Get-Content vscode-extensions.txt) {
+  Write-Host $name -ForegroundColor Blue
+  codium --install-extension $name
+  Write-Host `n
+}
 ```
 
 MrCode
@@ -70,29 +70,29 @@ MrCode
 
 ### Backup
 
-```
-mkdir -p User\snippets
+```ps
+mkdir -ErrorAction SilentlyContinue User\snippets
 
 # Backup settings files
-cp %APPDATA%\MrCode\User\keybindings.json User\
-cp %APPDATA%\MrCode\User\settings.json User\
-cp %APPDATA%\MrCode\User\snippets\* User\snippets\
+Copy-Item -Path $env:appdata\MrCode\User\keybindings.json -Destination User
+Copy-Item -Path $env:appdata\MrCode\User\settings.json -Destination User
+Copy-Item -Path $env:appdata\MrCode\User\snippets\* -Destination User\snippets
 
 # Export extension list
-mrcode --list-extensions | sort -f -o vscode-extensions.txt
+mrcode --list-extensions | Out-File -FilePath vscode-extensions.txt
 ```
 
 ### Restore
 
-```
+```ps
 # Restore settings files
-cp -r User\* %APPDATA%\MrCode\User\
+Get-ChildItem -File User | Copy-Item -Path { $_.FullName } -Destination $env:appdata\MrCode\User
+Get-ChildItem -File User\snippets | Copy-Item -Path { $_.FullName } -Destination $env:appdata\MrCode\User\snippets
 
 # Import extensions
-for LINE in $(cat "vscode-extensions.txt")
-do
-  printf "%b%s%b\n" "\e[44m" "$LINE" "\e[49m"
-  mrcode --install-extension "$LINE"
-  echo -e "\n"
-done
+ForEach ($name in Get-Content vscode-extensions.txt) {
+  Write-Host $name -ForegroundColor Blue
+  mrcode --install-extension $name
+  Write-Host `n
+}
 ```

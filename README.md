@@ -5,10 +5,17 @@ Provides my preferred settings for vscode
 
 [Follow the documentation to install the command `code`](https://code.visualstudio.com/docs/setup/setup-overview)
 
+OS'
+---
+
+- [Windows](./windows.md)
+- [macOS](./macos.md)
+- [Linux](./linux.md)
+
 Backup
 ------
 
-```
+```sh
 mkdir -p User/snippets
 
 # Backup settings files
@@ -23,7 +30,7 @@ code --list-extensions | sort -f -o vscode-extensions.txt
 Restore
 -------
 
-```
+```sh
 # Restore settings files
 cp -r User/* ~/Library/Application\ Support/Code/User/
 
